@@ -23,7 +23,7 @@ I used ChatGPT to identify and explain the bugs, and I used Claude in VS Code to
 
 ## 3. Debugging and testing your fixes
 
-I considered a bug fixed only after checking it with both automated tests and the live Streamlit application. I ran pytest tests for a guess above the secret number, a guess below it, and a correct guess, and the tests passed. I manually changed between Easy, Normal, and Hard and confirmed that the displayed guessing range matched the selected difficulty. I also verified that the hints pointed in the correct direction and that New Game reset the secret, attempts, score, status, and history.
+I considered a bug fixed only after checking it with both automated tests and the live Streamlit application. I ran four pytest tests covering a high guess, a low guess, a winning guess, and a numeric string secret. All four passed. I manually changed between Easy, Normal, and Hard and confirmed that the displayed guessing range matched the selected difficulty. I also verified that the hints pointed in the correct direction and that New Game reset the secret, attempts, score, status, and history.
 
 ---
 

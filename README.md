@@ -42,17 +42,15 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 
 ## 🧪 Test Results
 
-```
-pytest tests/
-============================= test session starts =============================
-platform win32 -- Python 3.13.2, pytest-9.1.1, pluggy-1.6.0
-rootdir: C:\codepath\ai110-module1show-gameglitchinvestigator-starter
-plugins: anyio-4.15.1
+```text
 collected 4 items
 
-tests\test_game_logic.py ....                                            [100%]
+tests/test_game_logic.py::test_guess_too_high PASSED
+tests/test_game_logic.py::test_guess_too_low PASSED
+tests/test_game_logic.py::test_winning_guess PASSED
+tests/test_game_logic.py::test_check_guess_handles_string_secret PASSED
 
-============================== 4 passed in 0.05s ==============================
+4 passed in 0.16s
 ```
 
 ## 🚀 Stretch Features
