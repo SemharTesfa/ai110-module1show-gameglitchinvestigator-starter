@@ -25,28 +25,34 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+The purpose of this project was to debug an AI-generated number-guessing game. I found backward hints, incomplete New Game behavior, incorrect difficulty-range handling, and a hardcoded range message. I corrected these problems, moved `check_guess()` into `logic_utils.py`, and added pytest coverage. I used ChatGPT to understand the problems and Claude in VS Code to apply code changes, but I reviewed and tested every suggestion before accepting it.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. The user selects Normal difficulty, which displays a range of 1 to 100.
+2. With a secret number of 50, the user enters 40.
+3. The game returns "Too Low" and correctly tells the user to go higher.
+4. The user enters 70, and the game returns "Too High" and tells the user to go lower.
+5. The user enters 50, and the game displays the winning message and final score.
+6. The user clicks New Game, and the secret, attempts, score, status, and history reset.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+pytest tests/
+============================= test session starts =============================
+platform win32 -- Python 3.13.2, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\codepath\ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.15.1
+collected 4 items
+
+tests\test_game_logic.py ....                                            [100%]
+
+============================== 4 passed in 0.05s ==============================
 ```
 
 ## 🚀 Stretch Features
